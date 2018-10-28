@@ -26,10 +26,11 @@
                         <div class="back">
                             <h3>{{data.titulo}}</h3>
                             <p>{{data.descripcion}}</p>
-                            <button :onclick="vm.showPicture">More Info</button>
+                            <a class="thumbnail"data-fancybox="gallery" :href="data.detalle"><button>More Info</button></a>
                         </div>
                         <div class="front">
-                            <a class="thumbnail" data-fancybox="gallery" :href="data.detalle"><img :src="data.detalle"></a>
+<!--                            <a class="thumbnail" <img :src="data.detalle"></a>-->
+                            <img :src="data.detalle">
                         </div>
                     </div>
                 </div>

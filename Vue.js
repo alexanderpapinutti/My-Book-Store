@@ -8,7 +8,7 @@ var vm = new Vue({
     created: function () {
         this.loadData(this.link);
 //        this.getCard();
-        this.showPicture();
+        
     },
     methods: {
 
@@ -24,7 +24,7 @@ var vm = new Vue({
                     })
                     .then(function (data) {
                         vm.getInformation(data);
-                        
+                        vm.showPicture();
                     })
             .catch(error => console.log(error));
 
@@ -44,6 +44,7 @@ var vm = new Vue({
     },
     showPicture: function(){
         var button;
+        console.log("hey");
     }
 //    getCard: function() {
 //        var card;
