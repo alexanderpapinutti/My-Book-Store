@@ -9,27 +9,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
-<body class="body container">
+<body class="body">
     <div id="app">
         <div class="top_side">
 
         </div>
-        <div class="middle_side">
-            <div v-for="picture in books">
-                
-                <a data-fancybox="gallery" :href="allInfo"><img :src="picture"></a>
-                    
+        <div class="middle_side container">
+            <div class="row">
+                <div v-for="data in allInfo" class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="scene">
+                        <div class="card">
+                            <div class="card__face card__face--front">
+                                <a class="thumbnail" data-fancybox="gallery" :href="data.detalle"><img :src="data.detalle"></a>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <p>{{data.titulo}}</p>
+                                <p>{{data.descripcion}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-                
-            </div>
-       
-        <div class="bottom_side">
-
         </div>
     </div>
 </body>

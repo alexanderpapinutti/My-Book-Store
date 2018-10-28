@@ -1,32 +1,58 @@
-.top_side {
-    
+.thumbnail {}
+
+.scene {
+    width: 200px;
+    height: 320px;
+    perspective: 600px;
+
 }
 
-.middle_side {
-    
-}
-
-.bottom_side {
-    
-}
-
-.gallery{
-    width:100%;
-    height: 300px;
-    
-}
-/*
-.gallery:hover {
-    transform: rotateY(180deg);
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
     transform-style: preserve-3d;
-}
-*/
-
-.my_pictures {
-    width:25%;
+    cursor: pointer;
+    position: relative;
 }
 
-.container {
-    display:flex;
-    flex-wrap:wrap; 
+.card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
 }
+
+.card__face--front {
+    
+}
+
+.card__face--back {
+    /*  visibility: hidden;*/
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+img {
+    height: 300px;
+    width: 200px;
+    border: solid black 10px;
+}
+
+.images {
+    height: 40px;
+    width: 25%;
+    border: solid black 10px;
+
+}
+
+
+
+
+
+
+
