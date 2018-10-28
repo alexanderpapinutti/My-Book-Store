@@ -1,6 +1,7 @@
 var vm = new Vue({
     el: "#app",
     data: {
+        allInformation: [],
         descriptions: [],
         pictures: [],
         titles: [],
@@ -36,6 +37,7 @@ var vm = new Vue({
     },
     getInformation: function (data) {
         var books;
+        
         var newTitles = [];
         var newDescriptions = [];
         var newPictures = [];

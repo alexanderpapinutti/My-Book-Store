@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -19,15 +20,14 @@
 
         </div>
         <div class="middle_side">
-            <div class="container">
-                <div class="my_pictures" v-for="picture in pictures">
-                    <a :href="picture">
-                        <img class="gallery" :src="picture">
-                    </a>    
-                </div>
+            <div v-for="picture in books">
+                
+                <a data-fancybox="gallery" :href="allInfo"><img :src="picture"></a>
+                    
+            </div>
                 
             </div>
-        </div>
+       
         <div class="bottom_side">
 
         </div>
