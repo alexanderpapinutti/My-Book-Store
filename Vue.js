@@ -7,7 +7,8 @@ var vm = new Vue({
     },
     created: function () {
         this.loadData(this.link);
-        this.getCard();
+//        this.getCard();
+        this.showPicture();
     },
     methods: {
 
@@ -41,16 +42,19 @@ var vm = new Vue({
         console.log(vm.allInfo);
         
     },
-    getCard: function() {
-        var card;
-        card = this.document.querySelector('.card');
-        card.addEventListener("mouseover", function(){
-            card.classList.toggle('is-flipped');
-        });
-        
-        
-           
-    },
+    showPicture: function(){
+        var button;
+    }
+//    getCard: function() {
+//        var card;
+//        card = this.document.querySelector('.card');
+//        card.addEventListener("mouseover", function(){
+//            card.classList.toggle('is-flipped');
+//        });
+//        
+//        
+//           
+//    },
         
 
     
