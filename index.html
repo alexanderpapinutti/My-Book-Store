@@ -17,20 +17,32 @@
 <body class="body">
     <div id="app">
         <div class="top_side">
-
+            <div class="container search">
+                <br />
+                <div class= "row">
+                    <div class="col-md-1">
+                        <img class="resize"src="bookshelf.png">
+                    </div>
+                    <div class="col-md-7">
+                        <h1>Ubiqum Book Store</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" id="my_input" v-model="search" placeholder="Search in lower-case"> 
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="middle_side container">
             <div class="row">
-                <div v-for="data in allInfo" class="col-lg-3 col-md-4 col-sm-6">
+                <div v-for="data in filterBooks" class="col-lg-3 col-md-4 col-sm-6">
                     <div class="flip3D">
                         <div class="back">
-                            <h3>{{data.titulo}}</h3>
-                            <p>{{data.descripcion}}</p>
-                            <a class="thumbnail"data-fancybox="gallery" :href="data.detalle"><button>More Info</button></a>
+                            <h3 id="my_titles">{{data.titulo}}</h3>
+                            <p id="my_descriptions">{{data.descripcion}}</p>
+                            <a class="thumbnail" data-fancybox="gallery" :href="data.detalle"><button>More Info</button></a>
                         </div>
                         <div class="front">
-<!--                            <a class="thumbnail" <img :src="data.detalle"></a>-->
-                            <img :src="data.detalle">
+                            <img :src="data.portada">
                         </div>
                     </div>
                 </div>
